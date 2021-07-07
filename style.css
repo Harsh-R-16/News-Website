@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  letter-spacing: 3px;
+}
+
+#mainSec {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 12% 85%;
+  grid-gap: 2%;
+  padding: 10px;
+  margin-top: 20px;
+}
+div {
+  border: 1px solid #000;
+}
+a {
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+}
+p {
+  margin: 10px;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+}
+#name {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+#btn {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0px auto;
+  background-color: white;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -2px;
+}
+#btn button {
+  padding: 5px 20px;
+  border-radius: 6px;
+  background-color: white;
+  margin: 20px 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: none;
+  border-left: 1px solid #000;
+}
+#main div {
+  width: 40%;
+  margin: 20px 0px;
+  position: relative;
+  border-color: rgb(163, 154, 154);
+  border-radius: 10px;
+}
+img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+#main div:nth-of-type(3n) {
+  width: 86.5%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  /* height: 290px; */
+  padding: 5px;
+}
+
+.div {
+  width: 100% !important;
+  margin: 0px !important;
+  border: none;
+}
+.img {
+  height: 100%;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.img-2 {
+  border-bottom-left-radius: 0px;
+}
+button:hover {
+  z-index: 1;
+  transition: 0.4s linear;
+  transform: scale(1.1);
+}
+#country {
+  height: fit-content;
+}
+
+.title {
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  color: rgb(253, 2, 2);
+}
+a {
+  color: rgb(28, 91, 173);
+}
+.srcPara {
+  position: absolute;
+  right: -10px;
+  top: 205px;
+  color: white;
+  background-color: red;
+  padding: 5px;
+}
+.src2Para {
+  position: absolute;
+  right: -10px;
+  top: 225px;
+  color: white;
+  background-color: red;
+  padding: 7px 10px;
+}
+.url {
+  width: 100%;
+}
