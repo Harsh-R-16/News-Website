@@ -1,5 +1,6 @@
 import { nameOfCountry, countries } from "./data.js";
 import { types } from "./data.js";
+
 let divCon = document.querySelector("#country");
 let section = document.querySelector("section");
 
@@ -19,8 +20,10 @@ getData("in", "health");
 // country=ve&category=health
 async function getData(con, type) {
   let a = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=${con}&category=${type}&apiKey=1933591142374b34984a1ed1b46d3904`
+    `https://newsapi.org/v2/top-headlines?country=${con}&category=${type}&apiKey=199730ef83854286a05ef0005c689379`
   );
+  // 1933591142374b34984a1ed1b46d3904
+
   let b = await a.json();
   let main = document.getElementById("main");
   main.innerHTML = "";

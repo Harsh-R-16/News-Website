@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="country">
+    <button onclick="getNewsData()">SEARCH</button>
+    <div id="container"></div>
+    <script>
+        var container = document.getElementById('container')
+
+        async function getNewsData() {
+            try {
+                var country = document.getElementById('country').value;
+                //var API_KEY = "46c76ab97b194266a0dc18ea30ea0e2f"
+                var res = await fetch(`https://newsapi.org/v2/everything?q=tesla&from=2022-01-14&sortBy=publishedAt&apiKey=199730ef83854286a05ef0005c689379`);
+                var data = await res.json();
+                console.log(data)
+                displayData(data)
+            }
+            catch (err) {
+                console.log(err)
+            }
+
+        }
+        getNewsData()
+        function displayData(data) {
+            container.innerHTML = ''
+
+
+            var news_info = document.createElement('div')
+
+
+
+            var authors = document.createElement('p')
+            authors.textContent = data.articles.author
+
+            var title = document.createElement('p')
+            title.textContent = data.articles.source.title
+
+            var images = document.createElement('img')
+            images.src - data.articles.source.urlToImage
+
+            news_info.append(authors, title, images)
+
+            container.append(news_info)
+
+        }
+    </script>
+</body>
+
+</html>
